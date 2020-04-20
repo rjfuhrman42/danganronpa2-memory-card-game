@@ -1,13 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #000000;
+  color: greenyellow;
+  font-family: 'VT323', monospace;
+  height: 100%;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.App {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 9vw);
+  grid-template-rows: repeat(4, 13em);
+  justify-content: center;
+  gap: 0.5em;
+}
+
+.cards-grid.disabled {
+  pointer-events:none
+}
+
+.card {
+  width: 10em;
+  height: 13em;
+  perspective: 900px;
+}
+
+.card.matched{
+  opacity: 0;
+  transition: opacity .5s ease;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  cursor: pointer;
+
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+}
+
+.card.flipped .content {
+  transform: rotateY( 180deg ) ;
+  transition: transform 0.5s;
+}
+
+.front,
+.back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #202020;
+  line-height: 300px;
+  color: #03446A;
+  text-align: center;
+  font-size: 60px;
+  border-radius: 5px;
+  backface-visibility: hidden;
+}
+
+.back {
+  background-image: url("./assets/mono.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid #8b0000;
+}
+
+.front {
+  background: rgb(128, 0, 0);
+  color: white;
+  transform: rotateY( 180deg );
+}
+
+.card-front-image, .card-back-image{
+  width: 70%;
 }
