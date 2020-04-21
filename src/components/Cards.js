@@ -112,7 +112,7 @@ function Cards () {
                 )
             )}
             <div className="game-menu">
-                <p>{playing ? `TIME: ${time} TURNS:${turns}` : "CLICK A CARD TO START..."}</p>
+                <p>{playing ? `TIME: ${Math.floor(time / 60)}:${time % 60} TURNS:${turns}` : "CLICK A CARD TO START..."}</p>
             </div>
             <button onClick={() => winGame()}>WIN!</button>
         </div>
