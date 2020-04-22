@@ -10,6 +10,7 @@ function Cards () {
     const [turns, setTurns] = useState(0)
     const [playing, setPlaying] = useState(false)
     const [time, setTime] = useState(STARTING_TIME)
+    const [wins, setWins] = useState(0)
 
     useEffect(() => {
         setupGame()
@@ -37,7 +38,10 @@ function Cards () {
     useEffect(() => {
 
         if(matchedCards.length === images.length * 2) 
-        setPlaying(false)
+        {
+            setPlaying(false)
+            setWins(prev => prev + 1)
+        }
 
     }, [matchedCards])
 
@@ -98,6 +102,11 @@ function Cards () {
         setMatchedCards(matches)
     }
 
+    let currentSeconds = time % 60
+    currentSeconds = currentSeconds > 9 ? currentSeconds : `0${currentSeconds}`
+    let endMinutes = Math.floor((STARTING_TIME - time) / 60)
+    let endSeconds = Math.floor((STARTING_TIME - time) % 60)
+
     if(time > 0 && matchedCards.length < images.length * 2)
     return (
         <div className={'cards-grid'}>
@@ -111,17 +120,19 @@ function Cards () {
                 />
                 )
             )}
-            <div className="game-menu">
-                <p>{playing ? `TIME: ${Math.floor(time / 60)}:${time % 60} TURNS:${turns}` : "CLICK A CARD TO START..."}</p>
-            </div>
-            <button onClick={() => winGame()}>WIN!</button>
+            <div className="turns">TURNS:{turns}</div>
+            <div className="timer">{playing ? `TIME: ${Math.floor(time / 60)}:${currentSeconds}` : 'CLICK A CARD TO START...'}</div> 
+            <div className="wins">WINS: {wins}</div>
+            {/* <div>CLICK A CARD TO START...</div>
+            <button onClick={() => winGame()}>WIN!</button> */}
         </div>
     )
     else return (
         <div className="game-over-display">
             <h1>{matchedCards.length === images.length * 2 ? 'YOU WIN!' : 'TIMES UP!'}</h1>
             <h1>TURNS: {turns}</h1>
-            <h1>TIME: {STARTING_TIME - time}</h1>
+            <h1>TIME: {endMinutes}:{endSeconds > 9 ? `${endSeconds}` : `0${endSeconds}` }</h1>
+            <h1>WINS: {wins}</h1>
             <button onClick={setupGame}>PLAY AGAIN?</button>
         </div>
     )

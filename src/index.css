@@ -25,6 +25,7 @@ code {
   grid-template-columns: repeat(8, 10vw);
   grid-template-rows: repeat(4, 12em);
   justify-content: center;
+  
   gap: 0.5em;
 }
 
@@ -95,6 +96,26 @@ code {
   grid-column-end: 9;
   font-size: 60px;
   font-weight: 100;
+}
+
+.timer, .turns, .wins {
+  font-size: 60px;
+  font-weight: 100;
+}
+
+.timer {
+  grid-column-start: 3;
+  grid-column-end: 7;
+}
+
+.turns {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.wins {
+  grid-column-start: 8;
+  grid-column-end: 9;
 }
 
 .game-over-display {
