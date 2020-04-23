@@ -7,7 +7,7 @@ import hajime from "./assets/hajime.png"
 import hiyoko from "./assets/hiyoko.png"
 import ibuki from "./assets/ibuki.png"
 import mahiru from "./assets/mahiru.png"
-import mechamaru from "./assets/mechamaru.png"
+import nekomaru from "./assets/nekomaru.png"
 import mikan from "./assets/mikan.png"
 import nagito from "./assets/nagito.png"
 import peko from "./assets/peko.png"
@@ -26,7 +26,7 @@ const characters = [
     hiyoko,
     ibuki,
     mahiru,
-    mechamaru,
+    nekomaru,
     mikan,
     nagito,
     peko,

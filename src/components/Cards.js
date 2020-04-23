@@ -85,11 +85,11 @@ function Cards () {
     }
 
     function setupGame() {
-        let array = [...images, ...images]                           // double the images array, so that we have two of each card)
+        let array = [...images, ...images]                           
 
         array = shuffle(array)
 
-        setCards(array) 
+        setCards(array)                                             // Reset the game
         setMatchedCards([])
         setFlippedCards([])          
         setTurns(0)
@@ -104,7 +104,7 @@ function Cards () {
 
     let currentSeconds = time % 60
     currentSeconds = currentSeconds > 9 ? currentSeconds : `0${currentSeconds}`
-    let endMinutes = Math.floor((STARTING_TIME - time) / 60)
+    let endMinutes = Math.floor((STARTING_TIME - time) / 60)                    // Formatting for the timer (90 seconds => 1:30...)
     let endSeconds = Math.floor((STARTING_TIME - time) % 60)
 
     if(time > 0 && matchedCards.length < images.length * 2)
@@ -121,10 +121,8 @@ function Cards () {
                 )
             )}
             <div className="turns">TURNS:{turns}</div>
-            <div className="timer">{playing ? `TIME: ${Math.floor(time / 60)}:${currentSeconds}` : 'CLICK A CARD TO START...'}</div> 
+            <div className="timer">{playing ? `TIME: ${Math.floor(time / 60)}:${currentSeconds}` : <div className="loading">CLICK A CARD TO START</div>}</div> 
             <div className="wins">WINS: {wins}</div>
-            {/* <div>CLICK A CARD TO START...</div>
-            <button onClick={() => winGame()}>WIN!</button> */}
         </div>
     )
     else return (
@@ -133,7 +131,7 @@ function Cards () {
             <h1>TURNS: {turns}</h1>
             <h1>TIME: {endMinutes}:{endSeconds > 9 ? `${endSeconds}` : `0${endSeconds}` }</h1>
             <h1>WINS: {wins}</h1>
-            <button onClick={setupGame}>PLAY AGAIN?</button>
+            <button className="play-again-button" onClick={setupGame}><h1>PLAY AGAIN?</h1></button>
         </div>
     )
 }
