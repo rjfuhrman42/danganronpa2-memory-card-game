@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/static/css/main.858fd8ce.chunk.css",
+    "main.js": "/static/js/main.b97bb393.chunk.js",
+    "main.js.map": "/static/js/main.b97bb393.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.f664d84b.js",
+    "runtime-main.js.map": "/static/js/runtime-main.f664d84b.js.map",
+    "static/js/2.6da4d34f.chunk.js": "/static/js/2.6da4d34f.chunk.js",
+    "static/js/2.6da4d34f.chunk.js.map": "/static/js/2.6da4d34f.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.ddadf5450225c2d169fbf235aed8fe9e.js": "/precache-manifest.ddadf5450225c2d169fbf235aed8fe9e.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.858fd8ce.chunk.css.map": "/static/css/main.858fd8ce.chunk.css.map",
+    "static/js/2.6da4d34f.chunk.js.LICENSE.txt": "/static/js/2.6da4d34f.chunk.js.LICENSE.txt",
+    "static/media/akane.png": "/static/media/akane.1c0a5cea.png",
+    "static/media/byakuya.png": "/static/media/byakuya.0a13b1f4.png",
+    "static/media/chiaki.png": "/static/media/chiaki.e1a01aba.png",
+    "static/media/crt_green_mask.png": "/static/media/crt_green_mask.2f0d3eb1.png",
+    "static/media/fuyuhiko.png": "/static/media/fuyuhiko.ba769d22.png",
+    "static/media/gundham.png": "/static/media/gundham.c2241e3f.png",
+    "static/media/hajime.png": "/static/media/hajime.cbdfead8.png",
+    "static/media/hiyoko.png": "/static/media/hiyoko.1e0405c8.png",
+    "static/media/ibuki.png": "/static/media/ibuki.92643a50.png",
+    "static/media/mahiru.png": "/static/media/mahiru.c626e844.png",
+    "static/media/mikan.png": "/static/media/mikan.32506a4f.png",
+    "static/media/nagito.png": "/static/media/nagito.39df86a3.png",
+    "static/media/nekomaru.png": "/static/media/nekomaru.43a912fb.png",
+    "static/media/peko.png": "/static/media/peko.eb4bbb20.png",
+    "static/media/soda.png": "/static/media/soda.347a231d.png",
+    "static/media/sonya.png": "/static/media/sonya.f40cae0b.png",
+    "static/media/teruteru.png": "/static/media/teruteru.4c751a4d.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f664d84b.js",
+    "static/js/2.6da4d34f.chunk.js",
+    "static/css/main.858fd8ce.chunk.css",
+    "static/js/main.b97bb393.chunk.js"
+  ]
+}
