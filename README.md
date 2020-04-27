@@ -1,4 +1,4 @@
-# Lift Tracker
+# Danganronpa 2 Memory Card Game (Fan game)
 
 ## Live version https://dangan2-memory-game.web.app/
 
