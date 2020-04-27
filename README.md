@@ -4,7 +4,7 @@
 
 Test your memory with this fanmade danganronpa 2 themed card flipping game! Match all 36 cards to win!
 
-![image](https://i.imgur.com/TMjyRiW.gifraw=true "Preview")
+![image](https://i.imgur.com/QRhvDvv.gifraw=true "Preview")
 
 ## Available Scripts
 
